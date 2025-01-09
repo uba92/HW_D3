@@ -16,6 +16,8 @@ public class Main3 {
 
         Cliente cliente1 = new Cliente("A000", "Topo", "Gigio", "topo@gigio.com", new Date());
 
+        Carrello carrello1 = new Carrello(cliente1);
+
         System.out.println(item1.getDescription() + " " + item1.getItemCode() + " " + item1.getPrice() + "$ " + "Disponibiltà: " + item1.getAvailableItemNumber());
         System.out.println(item2.getDescription() + " " + item2.getItemCode() + " " + item2.getPrice() + "$ " + "Disponibiltà: " + item2.getAvailableItemNumber());
         System.out.println(item3.getDescription() + " " + item3.getItemCode() + " " + item3.getPrice() + "$ " + "Disponibiltà: " + item3.getAvailableItemNumber());
@@ -27,5 +29,13 @@ public class Main3 {
         System.out.println(item5.getDescription() + " " + item5.getItemCode() + " " + item5.getPrice() + "$ " + "Disponibiltà: " + item5.getAvailableItemNumber());
 
         System.out.println("Cliente: " + cliente1.getFirstname() + " " + cliente1.getLastname());
+
+        Articolo[] listaArticoliNelCarrello = {item3, item1};
+
+        carrello1.setElencoArticoli(listaArticoliNelCarrello);
+
+        double totCarrello = carrello1.getTotaleCarrello();
+
+        System.out.println("Il totoale del carrello è: " + totCarrello);
     }
 }
