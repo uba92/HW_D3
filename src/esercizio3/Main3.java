@@ -30,9 +30,9 @@ public class Main3 {
 
         System.out.println("Cliente: " + cliente1.getFirstname() + " " + cliente1.getLastname());
 
-        Articolo[] listaArticoliNelCarrello = {item3, item1};
+//        Articolo[] listaArticoliNelCarrello = {item3, item1};
 
-        carrello1.setElencoArticoli(listaArticoliNelCarrello);
+        carrello1.setElencoArticoli(new Articolo[]{item3, item1});
 
         double totCarrello = carrello1.getTotaleCarrello();
 
