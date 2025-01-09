@@ -1,5 +1,7 @@
 package esercizio3;
 
+import java.util.Date;
+
 public class Main3 {
     public static void main (String[] args) {
         Articolo item1 = new Articolo("0000", "webcam", 99.99, 5);
@@ -12,6 +14,8 @@ public class Main3 {
 
         Articolo item5 = new Articolo("4444", "Tablet", 399.99, 1);
 
+        Cliente cliente1 = new Cliente("A000", "Topo", "Gigio", "topo@gigio.com", new Date());
+
         System.out.println(item1.getDescription() + " " + item1.getItemCode() + " " + item1.getPrice() + "$ " + "Disponibiltà: " + item1.getAvailableItemNumber());
         System.out.println(item2.getDescription() + " " + item2.getItemCode() + " " + item2.getPrice() + "$ " + "Disponibiltà: " + item2.getAvailableItemNumber());
         System.out.println(item3.getDescription() + " " + item3.getItemCode() + " " + item3.getPrice() + "$ " + "Disponibiltà: " + item3.getAvailableItemNumber());
@@ -21,5 +25,7 @@ public class Main3 {
         item5.addsAvailableItems(9);
 
         System.out.println(item5.getDescription() + " " + item5.getItemCode() + " " + item5.getPrice() + "$ " + "Disponibiltà: " + item5.getAvailableItemNumber());
+
+        System.out.println("Cliente: " + cliente1.getFirstname() + " " + cliente1.getLastname());
     }
 }
